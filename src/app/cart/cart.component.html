@@ -1,0 +1,43 @@
+<div class="container mt-3">
+  
+    <!-- <div class="row" >
+        <h3>Your Cart is Empty</h3>
+    </div> -->
+    <div class="row"   >
+        <div class="col-8">
+            <h2> Items In Cart </h2>
+            <hr>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Sr</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Units</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of cartItems , let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.price}}</td>
+                    <td> <img width="30" height="30" src={{item.image}} ></td>
+                    <td>1</td>
+                    <td><button class="btn btn-danger btn-sm" (click)="RemoveFromCart(item)" > Remove </button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr>
+        </div>
+        <div class="col-4">
+            <h2>Product Summary</h2>
+            <hr>
+            <p> <strong>MRP </strong></p>
+            <p> <strong>DISCOUNTED PRICE </strong></p>
+            <hr>
+            <p> <strong> TOTAL PAYABLE - {{grandTotal}} </strong></p>
+        </div>
+    </div>
+</div>
